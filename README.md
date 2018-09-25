@@ -1,7 +1,7 @@
 # ChromeCustomTabHelper
 Convenient helper class to launch web page through Google [Chrome Custom Tab](https://developer.chrome.com/multidevice/android/customtabs).
 
-[![](https://jitpack.io/v/YuanLiou/ChromeCustomTabHelper.svg)](https://jitpack.io/#YuanLiou/ChromeCustomTabHelper)
+[![](https://jitpack.io/v/YuanLiou/chrome-custom-tab-helper.svg)](https://jitpack.io/#YuanLiou/chrome-custom-tab-helper)
 
 ### How to install
 
@@ -16,8 +16,18 @@ Convenient helper class to launch web page through Google [Chrome Custom Tab](ht
 ```
 
 2. Add the dependency
+
+#### Stable version  <br>
+**minSdkVersion** is 19  <br>
+  
 ```groovy
-  implementation 'com.github.YuanLiou:ChromeCustomTabHelper:1.0'
+implementation 'com.github.YuanLiou:chrome-custom-tab-helper:1.0'
+```
+
+#### For Previewing Android X version  <br>
+**minSdkVersion** is 21
+```groovy
+implementation 'com.github.YuanLiou:chrome-custom-tab-helper:1.1b1'
 ```
 
 ### How to use
