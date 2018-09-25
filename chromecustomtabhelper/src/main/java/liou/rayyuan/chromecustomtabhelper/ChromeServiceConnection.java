@@ -1,10 +1,11 @@
 package liou.rayyuan.chromecustomtabhelper;
 
 import android.content.ComponentName;
-import android.support.customtabs.CustomTabsClient;
-import android.support.customtabs.CustomTabsServiceConnection;
 
 import java.lang.ref.WeakReference;
+
+import androidx.browser.customtabs.CustomTabsClient;
+import androidx.browser.customtabs.CustomTabsServiceConnection;
 
 /**
  * Created by louis383 on 2017/1/20.

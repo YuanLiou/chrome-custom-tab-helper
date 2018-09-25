@@ -2,10 +2,11 @@ package liou.rayyuan.chromecustomtabhelper;
 
 import android.app.Activity;
 import android.net.Uri;
-import android.support.customtabs.CustomTabsClient;
-import android.support.customtabs.CustomTabsIntent;
-import android.support.customtabs.CustomTabsServiceConnection;
 import android.util.Log;
+
+import androidx.browser.customtabs.CustomTabsClient;
+import androidx.browser.customtabs.CustomTabsIntent;
+import androidx.browser.customtabs.CustomTabsServiceConnection;
 
 /**
  * Created by louis383 on 2017/1/20.

@@ -5,6 +5,9 @@
 /.idea/modules.xml
 /.idea/workspace.xml
 .idea
+.project
+.settings
+/app/.classpath
 
 gradle.properties
 
