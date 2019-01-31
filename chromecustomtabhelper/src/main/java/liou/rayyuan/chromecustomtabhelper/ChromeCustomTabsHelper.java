@@ -17,8 +17,8 @@ public class ChromeCustomTabsHelper implements ChromeServiceConnection.Callback 
     private CustomTabsClient customTabsClient;
     private CustomTabsServiceConnection customTabsServiceConnection;
 
-    public static void openCustomTab(Activity activity, CustomTabsIntent customTabsIntent, Uri uri, Fallback fallback) {
-        String packageName = ChromeCustomTabsUtils.getPackageNameToUse(activity, uri.toString());
+    public static void openCustomTab(Activity activity, Browsers browsers, CustomTabsIntent customTabsIntent, Uri uri, Fallback fallback) {
+        String packageName = ChromeCustomTabsUtils.getPackageNameToUse(activity, browsers, uri.toString());
 
         if (packageName == null) {
             // Chrome doesn't installed.
@@ -31,12 +31,12 @@ public class ChromeCustomTabsHelper implements ChromeServiceConnection.Callback 
         }
     }
 
-    public void bindCustomTabsServices(Activity activity, String hostURL) {
+    public void bindCustomTabsServices(Activity activity, Browsers browsers, String hostURL) {
         if (customTabsClient != null) {
             return;
         }
 
-        String packageName = ChromeCustomTabsUtils.getPackageNameToUse(activity, hostURL);
+        String packageName = ChromeCustomTabsUtils.getPackageNameToUse(activity, browsers, hostURL);
         Log.i("ChromeCustomTabsHelper", "bound packageName: " + packageName);
         if (packageName == null) {
             return;
