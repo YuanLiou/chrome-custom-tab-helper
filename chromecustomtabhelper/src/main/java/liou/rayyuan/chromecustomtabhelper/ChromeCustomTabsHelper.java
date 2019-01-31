@@ -2,6 +2,7 @@ package liou.rayyuan.chromecustomtabhelper;
 
 import android.app.Activity;
 import android.net.Uri;
+import android.text.TextUtils;
 import android.util.Log;
 
 import androidx.browser.customtabs.CustomTabsClient;
@@ -20,8 +21,8 @@ public class ChromeCustomTabsHelper implements ChromeServiceConnection.Callback 
     public static void openCustomTab(Activity activity, Browsers browsers, CustomTabsIntent customTabsIntent, Uri uri, Fallback fallback) {
         String packageName = ChromeCustomTabsUtils.getPackageNameToUse(activity, browsers, uri.toString());
 
-        if (packageName == null) {
-            // Chrome doesn't installed.
+        if (TextUtils.isEmpty(packageName)) {
+            // Target browser doesn't installed.
             if (fallback != null) {
                 fallback.openWithWebView(activity, uri);
             }

@@ -83,6 +83,16 @@ public class ChromeCustomTabsUtils {
                     }
                 }
             }
+
+            // If prefer browser not installed, fall back to Chrome.
+            if (TextUtils.isEmpty(packageNameToUse)) {
+                for (String packageName : browserPackageNames.get(Browsers.CHROME)) {
+                    if (packagesSupportingCustomTabs.contains(packageName)) {
+                        packageNameToUse = packageName;
+                        break;
+                    }
+                }
+            }
         }
 
         return packageNameToUse;
