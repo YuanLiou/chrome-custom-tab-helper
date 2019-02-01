@@ -27,7 +27,7 @@ implementation 'com.github.YuanLiou:chrome-custom-tab-helper:1.0'
 #### For Previewing Android X version  <br>
 **minSdkVersion** is 21
 ```groovy
-implementation 'com.github.YuanLiou:chrome-custom-tab-helper:1.1b1'
+implementation 'com.github.YuanLiou:chrome-custom-tab-helper:1.1'
 ```
 
 ### How to use
@@ -38,11 +38,13 @@ implementation 'com.github.YuanLiou:chrome-custom-tab-helper:1.1b1'
 ```
 
 2. Warm up the custom tab service in the `onResume()` state of Activity or Fragment <br/>
-   And don't forget to cool down in the `onStop()` state
+   And don't forget to cool down in the `onStop()` state.
+   You can pick up your prefer browser in the second parameter.  <br/>
+   Current support browsers: Chrome, Firefox and Samsung internet.
 ```kotlin
     override fun onResume() {
         super.onResume()
-        chromeCustomTabHelper.bindCustomTabsServices(this, url)
+        chromeCustomTabHelper.bindCustomTabsServices(this, Browsers.CHROME, url)
     }
 
     override fun onStop() {
@@ -51,12 +53,12 @@ implementation 'com.github.YuanLiou:chrome-custom-tab-helper:1.1b1'
     }
 ```
 
-3. When it need to open web tab
+3. When it need to open web tab.
 ```kotlin
     val builder = CustomTabsIntent.Builder()
     // here custom your tab styles and behavior
     val chromeCustomTabIntent = builder.build()
-    ChromeCustomTabsHelper.openCustomTab(this, chromeCustomTabIntent, uri) { activity, uri ->
+    ChromeCustomTabsHelper.openCustomTab(this, Browsers.CHROME, chromeCustomTabIntent, uri) { activity, uri ->
         // if chrome is not install, fallback to standard webview 
         // or just send an intent to someone can handle
         val intent = Intent(Intent.ACTION_VIEW)
