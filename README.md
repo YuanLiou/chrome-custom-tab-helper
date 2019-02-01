@@ -27,7 +27,7 @@ implementation 'com.github.YuanLiou:chrome-custom-tab-helper:1.0'
 #### For Previewing Android X version  <br>
 **minSdkVersion** is 21
 ```groovy
-implementation 'com.github.YuanLiou:chrome-custom-tab-helper:1.1'
+implementation 'com.github.YuanLiou:chrome-custom-tab-helper:1.1.1'
 ```
 
 ### How to use
