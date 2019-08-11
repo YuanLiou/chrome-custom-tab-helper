@@ -1,7 +1,19 @@
+apply plugin: 'com.novoda.bintray-release'
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
-group = 'liou.rayyuan'
-version = '1.1'
+
+publish {
+    def groupProjectID = 'liou.rayyuan.chromecustomtabhelper'
+    def artifactProjectID = 'chrome-custom-tab-helper'
+    def publishVersionID = '1.1.1'
+
+    userOrg = 'louis383'
+    repoName = 'chrome-custom-tab-helper'
+    groupId = groupProjectID
+    artifactId = artifactProjectID
+    publishVersion = publishVersionID
+    desc = 'Convenient helper class to launch web page through Google Chrome Custom Tab.'
+    website = 'https://github.com/YuanLiou/chrome-custom-tab-helper'
+}
 
 android {
     compileSdkVersion 28
