@@ -4,7 +4,7 @@ apply plugin: 'com.android.library'
 publish {
     def groupProjectID = 'liou.rayyuan.chromecustomtabhelper'
     def artifactProjectID = 'chrome-custom-tab-helper'
-    def publishVersionID = '1.1.1'
+    def publishVersionID = '1.1.2'
 
     userOrg = 'louis383'
     repoName = 'chrome-custom-tab-helper'
@@ -22,7 +22,7 @@ android {
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
-        versionName "1.1"
+        versionName "1.1.2"
     }
 
     buildTypes {
