@@ -1,4 +1,4 @@
-package liou.rayyuan.chromecustomtabhelper
+package rayyuan.demo.chromecustomtabhelper
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4

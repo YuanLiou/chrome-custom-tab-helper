@@ -1,4 +1,4 @@
-package liou.rayyuan.chromecustomtabhelper
+package rayyuan.demo.chromecustomtabhelper
 
 import org.junit.Test
 

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="browser_names">
+        <item>Google Chrome</item>
+        <item>Firefox</item>
+        <item>Samsung Internet</item>
+    </array>
+</resources>

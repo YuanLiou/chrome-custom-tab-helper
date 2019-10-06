@@ -39,7 +39,7 @@ public class ChromeCustomTabsHelper implements ChromeServiceConnection.Callback 
 
         String packageName = ChromeCustomTabsUtils.getPackageNameToUse(activity, browsers, hostURL);
         Log.i("ChromeCustomTabsHelper", "bound packageName: " + packageName);
-        if (packageName == null) {
+        if (TextUtils.isEmpty(packageName)) {
             return;
         }
 
