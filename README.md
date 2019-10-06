@@ -19,7 +19,7 @@ allprojects {
 #### Stable version  (Android X)
 **minSdkVersion** is 21
 ```groovy
-implementation "liou.rayyuan.chromecustomtabhelper:chrome-custom-tab-helper:1.1.1"
+implementation "liou.rayyuan.chromecustomtabhelper:chrome-custom-tab-helper:[latest-version]"
 ```
 
 ### How to use
